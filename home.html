@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="header">
+  <div class="name-banner">Syed Mohammed Mujahid</div> 
+  <div class="project-banner">project 03:-log-in page without backend useing local localStorage</div>
+</div>
+  <div class="container" style="position: absolute;">
+    <h2>Welcome, <span id="userDisplay"></span></h2>
+    <button onclick="logout()">Sign Out</button>
+  </div>
+
+  <script>
+    const user = localStorage.getItem("username") || sessionStorage.getItem("username");
+    if (!user) {
+      window.location.href = "index.html";
+    } else {
+      document.getElementById("userDisplay").textContent = user;
+    }
+
+    function logout() {
+      localStorage.removeItem("username");
+      sessionStorage.removeItem("username");
+      window.location.href = "index.html";
+    }
+  </script>
+</body>
+</html>

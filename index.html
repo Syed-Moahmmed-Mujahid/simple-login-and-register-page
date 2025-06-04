@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="header">
+  <div class="name-banner">Syed Mohammed Mujahid</div> 
+  <div class="project-banner">project 03:-log-in page without backend useing local localStorage</div>
+</div>
+  <div class="container" style="position: absolute;">
+    <h2>Login</h2>
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+    <label class="remember" style="text-align:start;">
+  Remember Me
+  <input type="checkbox" id="remember">
+</label>
+
+    <button onclick="login()">Login</button>
+    <p id="error" class="error"></p>
+    <p><a href="register.html">Don't have an account? Register</a></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
